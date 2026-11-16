@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Baresco IT | Contact </title>
+         <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="css/style.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+
+
+                  <a href="index.html" class="logo">
+                  <img src="images/Baresco IT (13).svg" alt="Baresco IT">
+                  </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html"class="active">Contact</a></li>
+                    <li>
+                        <a href="contact.html" class="nav-cta">Get IT Support</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+        <main class="contact-main">
+
+    <section class="contact-hero">
+
+        <p class="section-label">
+            • &nbsp; CONTACT BARESCO IT &nbsp; •
+        </p>
+
+        <h2>
+            Get <span>IT Support</span>
+        </h2>
+
+        <p>
+            Choose your service, preferred date, and time.
+        </p>
+
+    </section>
+
+
+    <section class="contact-section">
+
+        <div class="contact-info">
+
+            <div class="contact-details">
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">
+                        <i data-lucide="house"></i>
+                    </div>
+
+                    <div>
+                        <h3>In-Home Service</h3>
+                        <p>
+                            We come to your home for convenient, reliable IT help.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+
+                    <div>
+                        <h3>Service Hours</h3>
+                        <p>Mon – Fri, after 5:30 PM</p>
+                    </div>
+                </div>
+
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+
+                    <div>
+                        <h3>Service Area</h3>
+                        <p>
+                            St. George, Utah & surrounding areas
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+       <div class="contact-form-container">
+
+    <form
+        class="contact-form"
+        id="serviceRequestForm"
+        action="https://formspree.io/f/xaeezqgd"
+        method="POST"
+    >
+
+        <input
+            type="hidden"
+            name="_subject"
+            value="New Baresco IT Service Request"
+        >
+        <input
+            type="hidden"
+            id="serviceLabel"
+            name="Service Category"
+>
+
+        <input
+            type="hidden"
+            id="specificService"
+            name="Specific Service"
+>
+
+        <div class="form-row">
+
+            <div class="form-group">
+                <label for="name">Name *</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="Name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    required
+                >
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="Phone"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="service">
+                    Service Needed *
+                </label>
+
+                <select
+                    id="service"
+                    required
+                >
+
+                    <option value="">
+                        Select a service
+                    </option>
+
+                    <option value="computer-repair">
+                        Computer Repair & Support
+                    </option>
+
+                    <option value="upgrades">
+                        Upgrades & Installation
+                    </option>
+
+                    <option value="home-tech">
+                        Home Tech Support
+                    </option>
+
+                    <option value="remote-support">
+                        Remote IT Support
+                    </option>
+
+                    <option value="console-repair">
+                        Gaming Console Repair
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+       
+
+
+        <div class="form-group full-width">
+
+            <label for="message">
+                Tell us what you need help with *
+            </label>
+
+            <textarea
+                id="message"
+                name="Message"
+                rows="5"
+                required
+                placeholder="Briefly describe the issue or service you need..."
+            ></textarea>
+
+        </div>
+
+        <button
+    type="submit"
+    class="btn contact-submit"
+    id="requestAppointmentBtn"
+>
+    <i data-lucide="calendar-check"></i>
+    <span>Request Appointment</span>
+</button>
+
+<p
+    class="form-status"
+    id="formStatus"
+    aria-live="polite"
+></p>
+
+    </form>
+
+</div>
+
+    </section>
+
+
+        </main>
+
+        
+        
+        
+<!-- =========================
+     APPOINTMENT MODAL
+========================== -->
+
+<div
+    class="booking-modal"
+    id="bookingModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="booking-modal-overlay"
+        id="bookingModalOverlay"
+    ></div>
+
+
+    <div
+        class="booking-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="bookingModalTitle"
+    >
+
+        <button
+            type="button"
+            class="booking-modal-close"
+            id="closeBookingModal"
+            aria-label="Close appointment calendar"
+        >
+            ×
+        </button>
+
+
+        <div class="booking-modal-header">
+
+            <div class="booking-modal-icon">
+                <i data-lucide="calendar-days"></i>
+            </div>
+
+            <div>
+
+                <h2 id="bookingModalTitle">
+                    Book Your Appointment
+                </h2>
+
+                <p>
+                    Choose an available date and time for your service.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="booking-modal-calendar">
+
+            <iframe
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1No1wDcKG-JlVFWja7-KJwlt1HZ8AFrMUGqJ8gwxo6p5cjLEN--dx-u2hcvDLU_RFxgzeDXOCY?gv=true"
+                title="Baresco IT Appointment Booking"
+                loading="lazy"
+            ></iframe>
+
+        </div>
+
+    </div>
+
+</div>
+         <footer>
+<!-- CTA ABOVE FOOTER -->
+<section class="footer-cta">
+
+    <div class="footer-cta-content">
+
+        <h2>Need Help With Your Computer?</h2>
+
+        <p>
+            Contact Baresco IT today for reliable home tech support.
+        </p>
+
+        <a href="contact.html" class="footer-cta-btn">
+            Contact Us
+        
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- BARESCO IT -->
+        <div class="footer-column footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                <img src="images/Baresco IT (13).svg" alt="Baresco IT">
+            </a>
+
+            <p class="footer-description">
+                Reliable computer repair and home tech support
+                for your everyday needs.
+            </p>
+
+            <div class="footer-contact">
+
+                <a href="mailto:contact@barescoit.com">
+                    <i data-lucide="mail"></i>
+                    <span>contact@barescoit.com</span>
+                </a>
+
+                <div>
+                    <i data-lucide="map-pin"></i>
+                    <span>St. George, Utah & surrounding areas</span>
+                </div>
+
+                <div>
+                    <i data-lucide="house"></i>
+                    <span>In-Home Service Available</span>
+                </div>
+
+        </div>
+
+                    <div class="footer-socials">
+
+        <a
+        href="https://www.facebook.com/profile.php?id=61596090638084"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Baresco IT on Facebook"
+    >
+        <i class="fa-brands fa-facebook-f"></i>
+         </a>
+
+        <a
+        href="https://www.instagram.com/barescoit/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Baresco IT on Instagram"
+    >
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        </div>
+          
+    </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+            <div class="footer-heading-line"></div>
+
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- SERVICES -->
+        <div class="footer-column">
+
+            <h3>Our Services</h3>
+            <div class="footer-heading-line"></div>
+
+            <ul class="footer-nav footer-services">
+
+                <li>
+                    <a href="services.html#computer-repair">
+                        <span>›</span>
+                        Computer Repair & Support
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html#upgrades">
+                        <span>›</span>
+                        Computer Upgrades
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html#home-tech">
+                        <span>›</span>
+                        Home Tech Setup
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html#remote-support">
+                        <span>›</span>
+                        Remote IT Support
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html#console-repair">
+                        <span>›</span>
+                        Gaming Console Repair
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- BUSINESS HOURS -->
+        <div class="footer-column footer-hours">
+
+            <h3>Business Hours</h3>
+            <div class="footer-heading-line"></div>
+
+            <div class="hours-info">
+
+                <i data-lucide="calendar-days"></i>
+
+                <div>
+                    <p>Monday – Friday</p>
+                    <span>After 5:30 PM</span>
+                </div>
+
+            </div>
+
+            <a href="contact.html" class="footer-support-link">
+                <i data-lucide="message-circle"></i>
+                <span>Contact Us</span>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM FOOTER -->
+    <div class="footer-bottom">
+
+        <p>
+            &copy; 2026 Baresco IT. All rights reserved.
+        </p>
+
+        <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <span>|</span>
+
+            <a href="#">Terms of Service</a>
+            <span>|</span>
+
+            <a href="#">Sitemap</a>
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/burbuja.js"></script>
+<script src="js/contact.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
